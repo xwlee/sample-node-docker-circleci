@@ -1,0 +1,11 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - docker build -t xwlee/sample-node .
+
+test:
+  override:
+    - docker run xwlee/sample-node npm test
