@@ -1,5 +1,4 @@
 #!/bin/bash
-docker build -t xwlee/sample-node .
 docker push xwlee/sample-node
 
 ssh deploy@128.199.77.198 << EOF

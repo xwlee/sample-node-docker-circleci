@@ -9,3 +9,10 @@ dependencies:
 test:
   override:
     - docker run xwlee/sample-node npm test
+
+deployment:
+  production:
+    branch: master
+    command:
+      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - ./deploy.sh
